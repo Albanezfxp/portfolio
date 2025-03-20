@@ -1,6 +1,6 @@
 .projects {
   padding: 8rem 2rem;
-  width: 100vw;
+  width: 100%;
   background: var(--primary-color);
   position: relative;
 }
@@ -33,7 +33,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -43,6 +43,9 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -51,7 +54,7 @@
 
 .project-image {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
@@ -63,6 +66,9 @@
 
 .project-info {
   padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-info h3 {
@@ -76,6 +82,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   font-size: 0.875rem;
+  flex: 1;
 }
 
 .technologies {
@@ -97,6 +104,7 @@
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: auto;
 }
 
 .project-links a {
@@ -118,6 +126,17 @@
   height: 1.25rem;
 }
 
+@media (max-width: 1024px) {
+  .projects {
+    padding: 6rem 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .projects {
     padding: 4rem 1rem;
@@ -129,6 +148,50 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .project-info {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 3rem 0.75rem;
+  }
+
+  .projects h2 {
+    font-size: 1.75rem;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-info p {
+    font-size: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .project-links {
+    gap: 0.75rem;
+  }
+
+  .project-links a {
+    font-size: 0.8rem;
   }
 }
 

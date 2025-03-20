@@ -1,11 +1,12 @@
 .home {
-  height: 180vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 6rem 2rem;
+  padding: 8rem 2rem 6rem;
   overflow: hidden;
+  position: relative;
 }
 
 .home-content {
@@ -136,6 +137,10 @@
 }
 
 @media (max-width: 1024px) {
+  .home {
+    padding: 7rem 1.5rem 6rem;
+  }
+
   .home-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -162,11 +167,11 @@
 
 @media (max-width: 768px) {
   .home {
-    padding: 4rem 1rem;
+    padding: 6rem 1rem 4rem;
   }
 
   .profile-info h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .profile-info p {
@@ -183,5 +188,23 @@
 
   .skills-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 5rem 1rem 4rem;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+
+  .profile-image {
+    width: 80%;
   }
 } 

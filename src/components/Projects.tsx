@@ -3,30 +3,12 @@ import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 import backEndEcomerce from '../assets/backEndE-comerce.png';
 import campanhaMarketing from '../assets/campanhaMarketingDigital.png';
-import pizzaria from '../assets/Pizzaria.png';
+import pizzaria from '../assets/image.png';
 import financas from '../assets/financas.png';
 import gestorEstoque from '../assets/gestorDeEstoque.png';
 
 export function Projects() {
   const projects = [
-    {
-      title: 'E-commerce Backend',
-      description:
-        'Backend para e-commerce com NestJS, Prisma e PostgreSQL. Sistema completo com autenticação JWT, gestão de produtos, carrinho, pagamentos via Stripe e área administrativa.',
-      image: backEndEcomerce,
-      technologies: ['NestJS', 'TypeScript', 'Prisma', 'PostgreSQL', 'JWT'],
-      github: 'https://github.com/Albanezfxp/E-comerce_backEnd',
-      live: '#',
-    },
-    {
-      title: 'Gerencimaneto de campanhas de marketing digital',
-      description:
-        'Sistema de gerenciamento de campanhas de marketing digital desenvolvido com Prisma, PostgreSQL e Zod. Implementa validação de dados, modelagem relacional e análise de métricas em tempo real. Permite gestão completa do ciclo de campanhas, desde planejamento até resultados.',
-      image: campanhaMarketing,
-      technologies: ['Node.js', 'PostgreSQL', 'Express', 'React'],
-      github: 'https://github.com/Albanezfxp/Api_de_gerenciamento_De_Leads',
-      live: '#',
-    },
     {
       title: 'Pizzaria Mil Graus',
       description:
@@ -34,7 +16,7 @@ export function Projects() {
       image: pizzaria,
       technologies: ['React', 'CSS'],
       github: 'https://github.com/Albanezfxp/pizzaria_mil_graus',
-      live: '#',
+      live: 'https://albanezfxp.github.io/pizzaria_mil_graus',
     },
     {
       title: 'Finanças Pessoais',
@@ -43,7 +25,7 @@ export function Projects() {
       image: financas,
       technologies: ['JavaScript', 'HTML', 'CSS', 'JSON Server'],
       github: 'https://github.com/Albanezfxp/Finan-as-Pessoais',
-      live: '#',
+      live: 'https://albanezfxp.github.io/Finan-as-Pessoais/',
     },
     {
       title: 'Gestor de Estoque',
@@ -52,6 +34,24 @@ export function Projects() {
       image: gestorEstoque,
       technologies: ['React', 'TypeScript', 'CSS', 'Vite'],
       github: 'https://github.com/Albanezfxp/Gestor-de-Estoque',
+      live: 'https://albanezfxp.github.io/Gestor-de-Estoque',
+    },
+    {
+      title: 'Api E-commerce',
+      description:
+        'Backend para e-commerce com NestJS, Prisma e PostgreSQL. Sistema completo com autenticação JWT, gestão de produtos, carrinho, pagamentos via Stripe e área administrativa.',
+      image: backEndEcomerce,
+      technologies: ['NestJS', 'TypeScript', 'Prisma', 'PostgreSQL', 'JWT'],
+      github: 'https://github.com/Albanezfxp/E-comerce_backEnd',
+      live: '#',
+    },
+    {
+      title: 'Api para gerencimaneto de campanhas de marketing digital',
+      description:
+        'Sistema de gerenciamento de campanhas de marketing digital desenvolvido com Prisma, PostgreSQL e Zod. Implementa validação de dados, modelagem relacional e análise de métricas em tempo real. Permite gestão completa do ciclo de campanhas, desde planejamento até resultados.',
+      image: campanhaMarketing,
+      technologies: ['Node.js', 'PostgreSQL', 'Express', 'React'],
+      github: 'https://github.com/Albanezfxp/Api_de_gerenciamento_De_Leads',
       live: '#',
     },
   ];
