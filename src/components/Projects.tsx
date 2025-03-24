@@ -34,7 +34,7 @@ export function Projects() {
       image: gestorEstoque,
       technologies: ['React', 'TypeScript', 'CSS', 'Vite'],
       github: 'https://github.com/Albanezfxp/Gestor-de-Estoque',
-      live: 'https://albanezfxp.github.io/Gestor-de-Estoque',
+      live: '#',
     },
     {
       title: 'Api E-commerce',
