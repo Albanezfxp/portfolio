@@ -6,10 +6,20 @@ import campanhaMarketing from '../assets/campanhaMarketingDigital.png';
 import pizzaria from '../assets/image.png';
 import financas from '../assets/financas.png';
 import gestorEstoque from '../assets/gestorDeEstoque.png';
+import furiaImg from "../assets/imageChat.png"
 
 export function Projects() {
   const projects = [
     {
+      title: 'Furia ChatBot',
+      description:
+        'Este projeto combina tecnologias modernas para criar uma experiência de chat envolvente para fãs da Fúria, com um chatbot único e funcionalidades de mensagens em tempo real e IA voltada para o time de CS:GO da Furia. A arquitetura foi projetada para ser escalável e manterável, com clara separação de responsabilidades entre os componentes.',
+      image: furiaImg,
+      technologies: ['React', "NestJS", "Docker", "PrismaORM"],
+      github: 'https://github.com/Albanezfxp/furia_project',
+      live: 'https://github.com/Albanezfxp/furia_project',
+    },
+       {
       title: 'Pizzaria Mil Graus',
       description:
         'Landing page para pizzaria com cardápio digital, localização no mapa, promoções especiais e informações de contato.',
@@ -32,7 +42,7 @@ export function Projects() {
       description:
         'Sistema de gestão de estoque desenvolvido com React e TypeScript. Oferece controle de produtos, movimentações e relatórios gerenciais.',
       image: gestorEstoque,
-      technologies: ['React', 'TypeScript', 'CSS', 'Vite'],
+      technologies: ['React', 'TypeScript',"NestJs", 'CSS', 'Vite'],
       github: 'https://github.com/Albanezfxp/Gestor-de-Estoque',
       live: '#',
     },

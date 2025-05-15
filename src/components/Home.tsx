@@ -1,7 +1,6 @@
 import './Home.css';
 import { motion } from 'framer-motion';
 import foto from '../assets/1726097471251.jpeg';
-import curriculo from '../../public/CurriculoGabrielAlbanez2002.pdf';
 
 export function Home() {
   const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -10,17 +9,6 @@ export function Home() {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const uploadCv = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const link = curriculo;
-    const a = document.createElement('a');
-    a.href = link;
-    a.download = 'Curriculo_Gabriel_Albanez.pdf'; // Nome do arquivo ao ser baixado
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
   };
 
   return (
@@ -92,9 +80,7 @@ export function Home() {
                 boas práticas em meus projetos.
               </p>
 
-              <button id="buttonCv" onClick={uploadCv}>
-                Baixar cv
-              </button>
+      
             </motion.div>
 
             <motion.div
@@ -116,6 +102,7 @@ export function Home() {
                 <li>NestJs</li>
                 <li>SQL</li>
                 <li>Git & GitHub</li>
+                <li>Docker</li>
               </ul>
             </motion.div>
           </div>
