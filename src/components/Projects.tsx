@@ -7,9 +7,20 @@ import pizzaria from '../assets/image.png';
 import financas from '../assets/financas.png';
 import gestorEstoque from '../assets/gestorDeEstoque.png';
 import furiaImg from "../assets/imageChat.png"
+import rhDashboardImg from "../assets/rhImageDashboard.png"
 
 export function Projects() {
   const projects = [
+    {
+      title: 'RH Dashboard',
+      description:
+        'Dashboard para RH com React, Chart.js e Axios no front-end, integrando uma API em NestJS com Prisma no back-end. Utilizeis views no banco de dados para otimizar consultas e exibir dados como funcionários, cargos, férias e avaliações. O projeto reforçou meus conhecimentos em arquitetura backend, visualização de dados e experiência do usuário.',
+      image: rhDashboardImg,
+      technologies: ['React', "NestJS", "ChartJs", "PrismaORM", "Postgres", "Axios"],
+      github: 'https://github.com/Albanezfxp/rh_dashboard',
+      live: "https://www.linkedin.com/posts/gabriel-albanez-801820262_dashboard-para-rh-sistema-de-gest%C3%A3o-activity-7339148515127799808-NPb7?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECMpoEB6ldYr7kqKjxFoa5C4aX1o5HKdHk"
+      
+    },
     {
       title: 'Furia ChatBot',
       description:
@@ -17,7 +28,7 @@ export function Projects() {
       image: furiaImg,
       technologies: ['React', "NestJS", "Docker", "PrismaORM"],
       github: 'https://github.com/Albanezfxp/furia_project',
-      live: 'https://github.com/Albanezfxp/furia_project',
+      live: "https://www.linkedin.com/posts/gabriel-albanez-801820262_chat-em-tempo-real-para-a-furia-esports-desenvolvi-activity-7325096965577326593-JNZ1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAECMpoEB6ldYr7kqKjxFoa5C4aX1o5HKdHk"
     },
        {
       title: 'Pizzaria Mil Graus',
