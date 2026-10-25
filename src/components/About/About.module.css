@@ -1,0 +1,184 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 160px var(--gutter) 40px;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+}
+
+.label {
+  flex-shrink: 0;
+  width: var(--label-col);
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.text {
+  flex: 1 1 0%;
+  color: var(--color-text);
+  font-size: clamp(26px, 3.06vw, 44px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: calc(52 / 44);
+}
+
+.content {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  gap: 64px;
+  min-width: 0;
+}
+
+.extra {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.extraText {
+  max-width: 640px;
+  color: var(--color-muted);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.extraText p + p {
+  margin-top: 20px;
+}
+
+.facts {
+  display: flex;
+  gap: 32px;
+}
+
+.fact {
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 17px;
+}
+
+.factLine {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: var(--color-line);
+  transform-origin: left center;
+}
+
+.factValue {
+  color: var(--color-text);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 34px;
+}
+
+.factLabel {
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Habilidades */
+.skills {
+  display: flex;
+  flex: 1 1 0%;
+  gap: 32px;
+}
+
+.skillCol {
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 17px; /* 1px da linha animada + 16px do design */
+}
+
+.line {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: var(--color-line);
+  transform-origin: left center;
+}
+
+.group {
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 16px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (max-width: 1023px) {
+  .label {
+    width: 160px;
+  }
+
+  .skills {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+
+  .skillCol {
+    flex: 1 1 calc(50% - 32px);
+  }
+}
+
+@media (max-width: 767px) {
+  .about {
+    gap: 72px;
+    padding-top: 120px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .label {
+    width: auto;
+  }
+
+  .content {
+    gap: 48px;
+  }
+
+  .facts {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .skills {
+    gap: 40px 24px;
+  }
+
+  .skillCol {
+    flex-basis: calc(50% - 24px);
+  }
+}

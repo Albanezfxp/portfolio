@@ -1,0 +1,241 @@
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 120px var(--gutter) 40px;
+}
+
+.label {
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 1px reservado para a linha animada (equivale ao border do design) */
+.row {
+  position: relative;
+  padding-top: 1px;
+}
+
+.row:last-child {
+  padding-bottom: 1px;
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-line);
+  transform-origin: left center;
+}
+
+.lineTop {
+  top: 0;
+}
+
+.lineBottom {
+  bottom: 0;
+}
+
+.content {
+  display: flex;
+  align-items: baseline;
+  padding-block: 28px;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.period {
+  flex-shrink: 0;
+  width: var(--label-col);
+  color: var(--color-muted);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.title {
+  flex: 1 1 0%;
+  color: var(--color-text);
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  transition: color 0.4s var(--ease-out);
+}
+
+.place {
+  flex-shrink: 0;
+  width: 320px;
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+}
+
+/* Botão do acordeão: reseta estilos nativos mantendo o layout de .content */
+.toggle {
+  width: 100%;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 32px;
+  color: var(--color-muted);
+  font-size: 24px;
+  line-height: 20px;
+  text-align: right;
+}
+
+.subLabel {
+  margin-top: 48px;
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+/* Painel: anima altura via grid 0fr -> 1fr (sem medir no JS) */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.5s var(--ease-out), opacity 0.4s var(--ease-out);
+}
+
+.panelOpen {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.panelInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+  overflow: hidden;
+  padding-left: var(--label-col);
+}
+
+.panelOpen .panelInner {
+  padding-bottom: 28px;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 640px;
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.bullets li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--color-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media (hover: hover) {
+  .row:hover .content {
+    transform: translateX(16px);
+  }
+
+  .row:hover .title {
+    color: var(--color-accent);
+  }
+}
+
+@media (max-width: 1023px) {
+  .period {
+    width: 180px;
+  }
+
+  .place {
+    width: 160px;
+  }
+}
+
+@media (max-width: 767px) {
+  .panelInner {
+    padding-left: 0;
+  }
+
+  .chevron {
+    position: absolute;
+    right: 0;
+    top: 22px;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    padding-block: 22px;
+  }
+
+  .period {
+    width: 50%;
+    order: 1;
+  }
+
+  .place {
+    width: 50%;
+    order: 2;
+  }
+
+  .title {
+    flex-basis: 100%;
+    order: 3;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content,
+  .title,
+  .panel {
+    transition: none;
+  }
+}

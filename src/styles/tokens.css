@@ -1,0 +1,26 @@
+/* Valores extraídos do Paper — "Portfolio templates" › A · Vitrine */
+:root {
+  --color-bg: #000000;
+  --color-surface: #0a0a0a;
+  --color-text: #ededed;
+  --color-muted: #8c8c8c;
+  --color-accent: #8e8cff;
+  --color-line: #2a2a2a;
+  --color-line-soft: #1e1e1e;
+  --color-outline: #6b6b6b;
+  --color-dim: #2a2a2a;
+
+  --font-sans: 'Inter Tight', system-ui, sans-serif;
+
+  --gutter: 40px;
+  --label-col: 300px;
+  --page-max: 1440px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 20px;
+  }
+}

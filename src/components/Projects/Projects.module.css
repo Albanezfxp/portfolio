@@ -1,0 +1,86 @@
+.projects {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 120px var(--gutter) 40px;
+  background: var(--color-bg);
+}
+
+/* Sobe por cima do hero no fim do pin (mesma condição do MEDIA.desktop) */
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .projects {
+    margin-top: -50vh;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.label {
+  margin-bottom: 16px;
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.heading {
+  color: var(--color-text);
+  font-size: min(72px, 5vw);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.heading :global(.reveal-line-mask) {
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.subheading {
+  color: var(--color-muted);
+  font-size: 16px;
+  line-height: 20px;
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px 40px;
+}
+
+@media (max-width: 767px) {
+  .projects {
+    gap: 40px;
+    padding-top: 96px;
+  }
+
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .subheading {
+    text-align: left;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

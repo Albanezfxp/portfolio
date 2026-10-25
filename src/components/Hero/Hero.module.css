@@ -1,0 +1,154 @@
+/* Medidas do Paper: hero 1440×900, boneco 288×620 em top 96,
+   brilho 760×760 em top 40, títulos 168/150 a 14px da base. */
+.hero {
+  --fig-h: min(620px, calc(100svh - 280px));
+  --title-size: min(168px, 11.667vw);
+
+  position: relative;
+  z-index: 0;
+  height: 100svh;
+  min-height: 640px;
+  overflow: clip;
+  background: var(--color-bg);
+}
+
+.navLayer {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+}
+
+/* Brilho */
+.glowAnchor {
+  position: absolute;
+  top: calc(96px - var(--fig-h) * 0.0903);
+  left: 50%;
+  width: calc(var(--fig-h) * 1.2258);
+  aspect-ratio: 1;
+  translate: -50% 0;
+  pointer-events: none;
+}
+
+.glowMove,
+.glow {
+  width: 100%;
+  height: 100%;
+}
+
+.glow {
+  border-radius: 50%;
+  background-image: radial-gradient(circle farthest-corner at 50% 50%, #8e8cff33 0%, #8e8cff00 68%);
+  background-image: radial-gradient(circle farthest-corner at 50% 50% in oklab, #8e8cff33 0%, #8e8cff00 68%);
+}
+
+/* Boneco */
+.figure {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  z-index: 1;
+  height: var(--fig-h);
+  aspect-ratio: 288 / 620;
+  translate: -50% 0;
+}
+
+.figureSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Base: meta + títulos */
+.bottom {
+  position: absolute;
+  inset: auto var(--gutter) 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.hint {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.label {
+  color: var(--color-muted);
+  text-align: right;
+}
+
+.titles {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: var(--title-size);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: calc(150 / 168);
+}
+
+.yearScroll,
+.yearMouse,
+.titleScroll,
+.titleMouse {
+  display: block;
+}
+
+.year {
+  display: block;
+  width: calc(var(--title-size) * 402 / 168);
+  height: calc(var(--title-size) * 150 / 168);
+  overflow: visible;
+}
+
+.yearText {
+  font-family: var(--font-sans);
+  font-size: 168px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  fill: var(--color-bg);
+  stroke: var(--color-outline);
+  stroke-width: 2px;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 0;
+}
+
+.title {
+  display: block;
+  color: var(--color-text);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Máscara do SplitText: folga para acento e descendentes não cortarem */
+.title :global(.hero-char-mask) {
+  padding: 0.16em 0.05em 0.08em;
+  margin: -0.16em -0.05em -0.08em;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    --title-size: 22vw;
+    --fig-h: min(520px, calc(100svh - 360px));
+  }
+
+  .titles {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .titleScroll {
+    align-self: flex-end;
+  }
+}
