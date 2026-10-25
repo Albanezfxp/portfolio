@@ -127,6 +127,12 @@
     grid-column: 1 / -1;
   }
 
+  /* Email longo: fonte proporcional ao viewport para caber em uma linha (320px → ~16px) */
+  .rowValue {
+    overflow-wrap: break-word;
+    font-size: clamp(16px, 5vw, 28px);
+  }
+
   .row:hover,
   .row:focus-visible {
     padding-left: 0;

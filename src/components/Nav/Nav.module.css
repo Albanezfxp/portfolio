@@ -36,6 +36,7 @@
 }
 
 .link {
+  white-space: nowrap;
   color: var(--color-text);
   font-size: 14px;
   font-weight: 500;
@@ -54,5 +55,22 @@
 
   .links {
     gap: 18px;
+  }
+}
+
+/* Com 5 links o logo não cabe: o menu ocupa a largura toda e a fonte acompanha o viewport */
+@media (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+
+  .links {
+    flex: 1;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .link {
+    font-size: clamp(10.5px, 3.3vw, 14px);
   }
 }

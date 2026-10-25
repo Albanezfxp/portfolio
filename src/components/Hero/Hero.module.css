@@ -145,7 +145,7 @@
 
   .titles {
     flex-direction: column;
-    gap: 4px;
+    gap: 10px;
   }
 
   .titleScroll {
