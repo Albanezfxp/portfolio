@@ -107,20 +107,20 @@
 
 .year {
   display: block;
-  width: calc(var(--title-size) * 402 / 168);
+  width: calc(var(--title-size) * 370 / 168);
   height: calc(var(--title-size) * 150 / 168);
   overflow: visible;
 }
 
 .yearText {
   font-family: var(--font-sans);
-  font-size: 168px;
+  font-size: 84px;
   font-weight: 800;
   letter-spacing: -0.04em;
   fill: var(--color-bg);
   stroke: var(--color-outline);
   stroke-width: 2px;
-  stroke-dasharray: 900;
+  stroke-dasharray: 1400;
   stroke-dashoffset: 0;
 }
 

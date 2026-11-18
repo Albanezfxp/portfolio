@@ -32,7 +32,7 @@ export default function Skills() {
 
   return (
     <div ref={root} className={styles.row}>
-      <h2 className={styles.label}>(03) Habilidades</h2>
+      <h2 className={styles.label}>Habilidades</h2>
       <div className={styles.skills}>
         {skills.map((skill) => (
           <div key={skill.group} className={styles.skillCol} data-skill-col>

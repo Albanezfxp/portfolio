@@ -30,7 +30,7 @@ export default function Hero() {
 
         tl.from(q('[data-glow]'), { autoAlpha: 0, scale: 0.85, duration: 1.4, ease: 'power2.out' }, 0)
           .from(split.chars, { yPercent: 105, duration: 0.9, stagger: 0.04, ease: 'power4.out' }, 0.55)
-          .fromTo(stroke, { strokeDashoffset: 900 }, { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut' }, 0.6)
+          .fromTo(stroke, { strokeDashoffset: 1400 }, { strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut' }, 0.6)
           .fromTo(stroke, { fillOpacity: 0 }, { fillOpacity: 1, duration: 0.4, ease: 'none' }, '>-0.15')
           .from(q('[data-hero-ui]'), { autoAlpha: 0, y: 10, duration: 0.6, stagger: 0.06 }, 1.45)
 
@@ -116,10 +116,12 @@ export default function Hero() {
         <h1 className={styles.titles}>
           <span className={styles.yearScroll} data-year-scroll>
             <span className={styles.yearMouse} data-year-mouse>
-              <svg className={styles.year} viewBox="0 0 402 150" aria-hidden="true">
-                <text x="0" y="136" className={styles.yearText} data-year-stroke>
-                  {profile.heroTag}
-                </text>
+              <svg className={styles.year} viewBox="0 0 370 150" aria-hidden="true">
+                {profile.heroTag.split(' ').map((word, i) => (
+                  <text key={word} x="0" y={62 + i * 74} className={styles.yearText} data-year-stroke>
+                    {word}
+                  </text>
+                ))}
               </svg>
               <span className="sr-only">{profile.heroTag}</span>
             </span>

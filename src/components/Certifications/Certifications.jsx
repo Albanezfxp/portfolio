@@ -33,7 +33,7 @@ export default function Certifications() {
 
   return (
     <section id="certificacoes" ref={root} className={styles.section}>
-      <h2 className={styles.label}>(05) Certificações</h2>
+      <h2 className={styles.label}>Certificações</h2>
 
       <div className={styles.filters} role="group" aria-label="Filtrar por emissor">
         {certificationIssuers.map((name) => (

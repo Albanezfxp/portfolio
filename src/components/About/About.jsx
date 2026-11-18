@@ -51,7 +51,7 @@ export default function About() {
   return (
     <section id="sobre" ref={root} className={styles.about}>
       <div className={styles.row}>
-        <h2 className={styles.label}>(02) Sobre</h2>
+        <h2 className={styles.label}>Sobre</h2>
         <div className={styles.content}>
           <p className={styles.text} data-reveal-text>
             {about}

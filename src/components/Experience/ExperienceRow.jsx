@@ -42,7 +42,7 @@ export default function ExperienceRow({ item, last, defaultOpen = false }) {
             {head}
           </button>
           <div id={panelId} className={`${styles.panel} ${open ? styles.panelOpen : ''}`} role="region">
-            <div className={styles.panelInner}>
+            <div className={styles.panelInner} data-cell>
               <ul className={styles.bullets}>
                 {item.bullets.map((b) => (
                   <li key={b}>{b}</li>

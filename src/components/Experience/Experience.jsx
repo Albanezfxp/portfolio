@@ -20,7 +20,7 @@ export default function Experience() {
             .from(row.querySelectorAll('[data-line]'), { scaleX: 0, duration: 0.9, ease: 'power3.inOut' })
             .from(
               row.querySelectorAll('[data-cell]'),
-              { autoAlpha: 0, y: 16, duration: 0.6, stagger: 0.1, ease: 'power3.out' },
+              { autoAlpha: 0, y: 16, duration: 0.6, stagger: 0.1, ease: 'power3.out', clearProps: 'opacity,visibility,transform' },
               '-=0.45',
             )
         })
@@ -30,19 +30,24 @@ export default function Experience() {
   )
 
   return (
-    <section id="experiencia" ref={root} className={styles.experience}>
-      <h2 className={styles.label}>(04) Experiência</h2>
-      <ol className={styles.list}>
-        {experience.map((item, i) => (
-          <ExperienceRow key={item.title} item={item} last={i === experience.length - 1} defaultOpen={i === 0} />
-        ))}
-      </ol>
-      <h3 className={styles.subLabel}>Formação</h3>
-      <ol className={styles.list}>
-        {education.map((item, i) => (
-          <ExperienceRow key={item.title} item={item} last={i === education.length - 1} />
-        ))}
-      </ol>
-    </section>
+    // Wrapper só para escopar o GSAP nas duas seções (sem estilos próprios)
+    <div ref={root}>
+      <section id="experiencia" className={styles.experience}>
+        <h2 className={styles.label}>Experiência</h2>
+        <ol className={styles.list}>
+          {experience.map((item, i) => (
+            <ExperienceRow key={item.title} item={item} last={i === experience.length - 1} defaultOpen={i === 0} />
+          ))}
+        </ol>
+      </section>
+      <section id="formacao" className={styles.experience}>
+        <h2 className={styles.label}>Formação</h2>
+        <ol className={styles.list}>
+          {education.map((item, i) => (
+            <ExperienceRow key={item.title} item={item} last={i === education.length - 1} />
+          ))}
+        </ol>
+      </section>
+    </div>
   )
 }

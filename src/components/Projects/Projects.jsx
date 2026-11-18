@@ -67,7 +67,7 @@ export default function Projects() {
     <section id="projetos" ref={root} className={styles.projects}>
       <header className={styles.head}>
         <div>
-          <h2 className={styles.label}>(01) Projetos</h2>
+          <h2 className={styles.label}>Projetos</h2>
           <p className={styles.heading} data-heading>
             Projetos
             <br />

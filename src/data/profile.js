@@ -6,13 +6,14 @@ export const profile = {
   location: 'João Pessoa, Brasil',
   locationShort: 'João Pessoa, PB',
   year: '2026',
-  heroTag: 'DEV',
+  heroTag: 'Gabriel Albanez',
 }
 
 export const navLinks = [
   { label: 'Projetos', href: '#projetos' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Experiência', href: '#experiencia' },
+  { label: 'Formação', href: '#formacao' },
   { label: 'Certificações', href: '#certificacoes' },
   { label: 'Contato', href: '#contato' },
 ]
