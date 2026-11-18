@@ -67,12 +67,9 @@ export default function Projects() {
     <section id="projetos" ref={root} className={styles.projects}>
       <header className={styles.head}>
         <div>
-          <h2 className={styles.label}>Projetos</h2>
-          <p className={styles.heading} data-heading>
+          <h2 className={styles.heading} data-heading>
             Projetos
-            <br />
-            selecionados
-          </p>
+          </h2>
         </div>
         <p className={styles.subheading} data-subheading>
           Sistemas reais, do banco de dados
